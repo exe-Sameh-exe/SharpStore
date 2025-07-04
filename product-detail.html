@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - SharpStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css" id="darkModeStyle">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./Images/notion-face.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Sharp<span>Store</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-main">
+                <img src="images/product1.jpg" alt="Product Image" id="productImage">
+                <div class="product-info">
+                    <h1 id="productTitle">Zapier CRM Starter System</h1>
+                    <p class="price" id="productPrice">$49.99</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span>(24 reviews)</span>
+                    </div>
+                    <p class="description" id="productDescription">
+                        Automate your customer relationship management with this powerful Zapier setup. Connect your email, calendar, and task management systems to create a seamless workflow that saves you hours each week.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">Contact to Purchase</a>
+                </div>
+            </div>
+            
+            <div class="product-details">
+                <h2>Details</h2>
+                <div class="details-content">
+                    <div class="details-section">
+                        <h3>What's Included</h3>
+                        <ul id="productIncludes">
+                            <li>Pre-built Zapier workflows</li>
+                            <li>Step-by-step setup guide</li>
+                            <li>Video tutorials</li>
+                            <li>Email templates</li>
+                            <li>Ongoing updates</li>
+                        </ul>
+                    </div>
+                    <div class="details-section">
+                        <h3>Who It's For</h3>
+                        <p id="productAudience">
+                            Freelancers, small business owners, and sales professionals who want to automate their client communication and follow-up processes without complex CRM software.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-faq">
+                <h2>FAQs</h2>
+                <div class="faq-item">
+                    <h3>How will I receive the product?</h3>
+                    <p>After purchase, you'll receive a digital download link with all files and instructions via email.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a refund policy?</h3>
+                    <p>Yes, we offer a 14-day money-back guarantee if the product doesn't meet your expectations.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need any special software?</h3>
+                    <p>You'll need a Zapier account (free or paid) to use this system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 SharpStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/dark-mode.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Simple product data loading based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('product');
+            
+            // In a real app, this would be an API call
+            const products = {
+                '1': {
+                    title: 'Zapier CRM Starter System',
+                    price: '$49.99',
+                    description: 'Automate your customer relationship management with this powerful Zapier setup. Connect your email, calendar, and task management systems to create a seamless workflow that saves you hours each week.',
+                    includes: [
+                        'Pre-built Zapier workflows',
+                        'Step-by-step setup guide',
+                        'Video tutorials',
+                        'Email templates',
+                        'Ongoing updates'
+                    ],
+                    audience: 'Freelancers, small business owners, and sales professionals who want to automate their client communication and follow-up processes without complex CRM software.',
+                    image: 'images/product1.jpg'
+                },
+                '2': {
+                    title: 'Notion Life OS',
+                    price: '$39.99',
+                    description: 'All-in-one life organization system built in Notion. Manage tasks, projects, goals, habits, and personal databases in one beautifully designed workspace.',
+                    includes: [
+                        'Complete Notion template',
+                        'Setup instructions',
+                        'Usage guide',
+                        'Customization tips',
+                        'Regular template updates'
+                    ],
+                    audience: 'Students, professionals, and productivity enthusiasts who want to centralize their personal and work life in Notion.',
+                    image: 'images/product2.jpg'
+                },
+                '3': {
+                    title: 'AI Prompt Engineering Guide',
+                    price: '$29.99',
+                    description: 'Master AI interactions with this comprehensive prompt library. Get better results from ChatGPT, Claude, and other AI tools with professionally crafted prompts.',
+                    includes: [
+                        '500+ curated prompts',
+                        'Prompt engineering guide',
+                        'Use case examples',
+                        'Prompt templates',
+                        'Regular updates'
+                    ],
+                    audience: 'Content creators, marketers, and professionals who regularly use AI tools and want to maximize their effectiveness.',
+                    image: 'images/product3.jpg'
+                },
+                '4': {
+                    title: 'Digital Freelancer Kit',
+                    price: '$59.99',
+                    description: 'Everything you need to manage your freelance business efficiently. From proposals to invoices, client management to time tracking.',
+                    includes: [
+                        'Notion freelance workspace',
+                        'Proposal templates',
+                        'Contract templates',
+                        'Invoice system',
+                        'Client management database'
+                    ],
+                    audience: 'Freelancers and independent contractors who want to systemize their business operations.',
+                    image: 'images/product1.jpg'
+                }
+            };
+            
+            if (productId && products[productId]) {
+                const product = products[productId];
+                document.getElementById('productTitle').textContent = product.title;
+                document.getElementById('productPrice').textContent = product.price;
+                document.getElementById('productDescription').textContent = product.description;
+                document.getElementById('productImage').src = product.image;
+                document.getElementById('productImage').alt = product.title;
+                
+                const includesList = document.getElementById('productIncludes');
+                includesList.innerHTML = '';
+                product.includes.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    includesList.appendChild(li);
+                });
+                
+                document.getElementById('productAudience').textContent = product.audience;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* dark-mode.css */
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --text-color: #f5f6fa;
+    --bg-color: #1e272e;
+    --card-bg: #2d3436;
+    --accent-color: #00cec9;
+    --light-gray: #636e72;
+    --dark-gray: #b2bec3;
+}
+
+/* Dark mode specific overrides */
+.dark-mode .hero .btn-primary:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.dark-mode .search-container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .search-input {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--light-gray);
+}
+
+.dark-mode .no-results {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.dark-mode .offer-card,
+.dark-mode .upcoming-item,
+.dark-mode .product-card,
+.dark-mode .details-section,
+.dark-mode .faq-item,
+.dark-mode .value-card,
+.dark-mode .contact-card,
+.dark-mode .testimonial-card,
+.dark-mode .metric {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
